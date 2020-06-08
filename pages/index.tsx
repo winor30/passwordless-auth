@@ -1,6 +1,27 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import { useCallback, useMemo, useState } from 'react';
+import KeyCreator from '../lib/keyCreator';
+import KeyCryptor from '../lib/keyCryptor';
 
+const useKeyCreator = () => useMemo(() => KeyCreator.create(), []);
+const useKeyCryptor = () => useMemo(() => KeyCryptor.create(), []);
 export default function Home() {
+  const keyCreator = useKeyCreator();
+  const keyCryptor = useKeyCryptor();
+
+  const [privateKey, setPrivateKey] = useState<string>();
+  const [encryptedKey, setEncryptedKey] = useState<string>();
+  const [redecryptedKey, setReDecryptedKey] = useState<string>();
+  const onClick = useCallback(async () => {
+    const privateKey = keyCreator.privateKey;
+    const { result } = await keyCryptor.encrypt(privateKey);
+    const encryptedKey = new TextDecoder().decode(result);
+    const { plaintext } = await keyCryptor.decrypt(result);
+    const redecryptedKey = new TextDecoder().decode(plaintext);
+    setPrivateKey(privateKey)
+    setEncryptedKey(encryptedKey)
+    setReDecryptedKey(redecryptedKey)
+  }, [keyCreator, keyCryptor]);
   return (
     <div className="container">
       <Head>
@@ -8,44 +29,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main style={{ width: '90%', margin: 'auto' }}>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Test Auth system
         </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <ol>
+          <li>Create private key</li>
+          <li>Encrypto private key by AWS KMS</li>
+          <li>Show encrypted key to safe storage</li>
+        </ol>
+        <button onClick={onClick}>encrypted</button>
+        <p>privateKey: {privateKey}</p>
+        <p>encryptedKey: {encryptedKey}</p>
+        <p>redecryptedKey: {redecryptedKey}</p>
       </main>
 
       <footer>
