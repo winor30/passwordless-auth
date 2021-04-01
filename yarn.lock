@@ -47,6 +47,211 @@
   dependencies:
     cross-fetch "3.0.4"
 
+"@aws-crypto/cache-material@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/cache-material/-/cache-material-1.7.0.tgz#87df36fa4d5c821b198a1168c8f5474927caa8b8"
+  integrity sha512-7ezoA11f7VLwm7FaOfdH9sloqfNpsOXRRxkQ8bPhI24wgCwTbumm1IT5UKNfoDMpfDF+kt+39xttlJtvOUndlQ==
+  dependencies:
+    "@aws-crypto/material-management" "^1.7.0"
+    "@aws-crypto/serialize" "^1.7.0"
+    "@types/lru-cache" "^5.1.0"
+    lru-cache "^5.1.1"
+    tslib "^1.11.1"
+
+"@aws-crypto/caching-materials-manager-browser@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/caching-materials-manager-browser/-/caching-materials-manager-browser-1.7.0.tgz#764a27d252eee1d0d7b978ae25c538f46af76c40"
+  integrity sha512-VRt76rM4R0VxUaYt5c3CT2ZAROoCjvPa/nCvXwFDcYwHzTpRsIq+BjsIviTTrFIjo136uhJfSOmljCINQpLcNg==
+  dependencies:
+    "@aws-crypto/cache-material" "^1.7.0"
+    "@aws-crypto/material-management-browser" "^1.7.0"
+    "@aws-crypto/serialize" "^1.7.0"
+    "@aws-crypto/web-crypto-backend" "^1.1.2"
+    "@aws-sdk/util-base64-browser" "1.0.0-beta.2"
+    "@aws-sdk/util-utf8-browser" "1.0.0-beta.2"
+    tslib "^1.11.1"
+
+"@aws-crypto/client-browser@^1.0.6":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/client-browser/-/client-browser-1.7.0.tgz#2c38342d86191184bb2347fa8137f8b1247b8d75"
+  integrity sha512-v4HifXhp4ic8gjMq3rsB3BR7TERW4uxSgIvykLO+GI7sojz11gk96M7VRpwJ0lRs+/bTxqzjNrKbyQvY0kt0OA==
+  dependencies:
+    "@aws-crypto/caching-materials-manager-browser" "^1.7.0"
+    "@aws-crypto/decrypt-browser" "^1.7.0"
+    "@aws-crypto/encrypt-browser" "^1.7.0"
+    "@aws-crypto/kms-keyring-browser" "^1.7.0"
+    "@aws-crypto/material-management-browser" "^1.7.0"
+    "@aws-crypto/raw-aes-keyring-browser" "^1.7.0"
+    "@aws-crypto/raw-rsa-keyring-browser" "^1.7.0"
+    "@aws-crypto/web-crypto-backend" "^1.1.2"
+    tslib "^1.11.1"
+
+"@aws-crypto/decrypt-browser@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/decrypt-browser/-/decrypt-browser-1.7.0.tgz#857dff10f2e95ca9610d82f96ae27963b406ede4"
+  integrity sha512-ibZ0tPZHejbakLbhHmMBMF4OS+AgbHH0txnihF2laTvCPXtKy9Y6S7KLNWv7IJl7HgyBwuF/gfmBXB+f1c8jdQ==
+  dependencies:
+    "@aws-crypto/material-management-browser" "^1.7.0"
+    "@aws-crypto/serialize" "^1.7.0"
+    "@aws-sdk/util-utf8-browser" "1.0.0-beta.2"
+    tslib "^1.11.1"
+
+"@aws-crypto/encrypt-browser@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/encrypt-browser/-/encrypt-browser-1.7.0.tgz#ee65c7367ee9b026bddf6e9dfdb1cadd383a7388"
+  integrity sha512-oYr0gTeUgSK78azcGi4sbslioGKdmoS52+ZRtxDOUicE6IKP3i9ynC9SE+tinOoIUXqeKLUacgSULKmmr8qXTw==
+  dependencies:
+    "@aws-crypto/material-management-browser" "^1.7.0"
+    "@aws-crypto/serialize" "^1.7.0"
+    "@aws-crypto/web-crypto-backend" "^1.1.2"
+    "@aws-sdk/util-utf8-browser" "1.0.0-beta.2"
+    tslib "^1.11.1"
+
+"@aws-crypto/ie11-detection@1.0.0", "@aws-crypto/ie11-detection@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/ie11-detection/-/ie11-detection-1.0.0.tgz#d3a6af29ba7f15458f79c41d1cd8cac3925e726a"
+  integrity sha512-kCKVhCF1oDxFYgQrxXmIrS5oaWulkvRcPz+QBDMsUr2crbF4VGgGT6+uQhSwJFdUAQ2A//Vq+uT83eJrkzFgXA==
+  dependencies:
+    tslib "^1.11.1"
+
+"@aws-crypto/kms-keyring-browser@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/kms-keyring-browser/-/kms-keyring-browser-1.7.0.tgz#2baa585dfca791c3a416d68fc56dd1a9f0c6fc0f"
+  integrity sha512-fi65V/WhU/4ExvpN2y3P0cmyFLMwoH7udJSk+7yIm9ikt//Zr1kBVuCnlierDaafBnqjtxPJEh3sD+Rwf0sohQ==
+  dependencies:
+    "@aws-crypto/kms-keyring" "^1.7.0"
+    "@aws-crypto/material-management-browser" "^1.7.0"
+    "@aws-crypto/web-crypto-backend" "^1.1.2"
+    aws-sdk "^2.650.0"
+    tslib "^1.11.1"
+
+"@aws-crypto/kms-keyring@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/kms-keyring/-/kms-keyring-1.7.0.tgz#6a20a593b291bc4d6b1913b78bf7080fc5219bb0"
+  integrity sha512-hRZN+mgVgQ3q+OeF+dyFJcnHiP35FIGhnE3/zukbWnpdu6Gb6xWu+tn9FI1cXWvCWeZPhViO/EVlNWlttc1Edw==
+  dependencies:
+    "@aws-crypto/material-management" "^1.7.0"
+    tslib "^1.11.1"
+
+"@aws-crypto/material-management-browser@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/material-management-browser/-/material-management-browser-1.7.0.tgz#7da99afa802bdce4284d1b49027ed774908261fa"
+  integrity sha512-4Z973GHjvRvvz135tmoWrabAa5IQF65o0O04sVLUn58Ic1Dc24V4fN6CmRVt6fKEPYzbtddEtde+Q2ZC3VVW/Q==
+  dependencies:
+    "@aws-crypto/material-management" "^1.7.0"
+    "@aws-crypto/serialize" "^1.7.0"
+    "@aws-crypto/web-crypto-backend" "^1.1.2"
+    "@aws-sdk/util-base64-browser" "1.0.0-beta.2"
+    tslib "^1.11.1"
+
+"@aws-crypto/material-management@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/material-management/-/material-management-1.7.0.tgz#2abb70f3a14f8c7a397d8114a36fcacbe29a1772"
+  integrity sha512-SyQClGfdLo3E5/P9wBKqqyMb9StOVgNGzMkGpZaQ3el0nMRlTXeRK5ZPn7eaARRYutEN4qwpqatjdAb0S6V5Gg==
+  dependencies:
+    asn1.js "^5.3.0"
+    bn.js "^5.1.1"
+    tslib "^1.11.1"
+
+"@aws-crypto/random-source-browser@^1.0.0-alpha.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/random-source-browser/-/random-source-browser-1.1.0.tgz#9086e2a315ae0437ae50873924fdddc265f680cb"
+  integrity sha512-SpGMue93BxhzCUqlRS1TF3uyiJrCG8YCyLfLrrj/TlUDRIdSoY2AzuK5AUntfajgDoFJAefQCw+Gc/Yu4dg3Tg==
+  dependencies:
+    "@aws-crypto/ie11-detection" "^1.0.0"
+    "@aws-crypto/supports-web-crypto" "^1.0.0"
+    "@aws-sdk/util-locate-window" "^3.0.0"
+    tslib "^1.11.1"
+
+"@aws-crypto/raw-aes-keyring-browser@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/raw-aes-keyring-browser/-/raw-aes-keyring-browser-1.7.0.tgz#098d7734c6498673c72855c5b0c1c13443a26a7a"
+  integrity sha512-OB6nUu0cntXMXHroXc9XL/1N9fUAblAOcfuo7ld4cqArpTXUE1FpfwSKx3w/paEpyXc1MFNUnBnhxAYm+AD08Q==
+  dependencies:
+    "@aws-crypto/material-management-browser" "^1.7.0"
+    "@aws-crypto/random-source-browser" "^1.0.0-alpha.0"
+    "@aws-crypto/raw-keyring" "^1.7.0"
+    "@aws-crypto/serialize" "^1.7.0"
+    "@aws-crypto/web-crypto-backend" "^1.1.2"
+    "@aws-sdk/util-utf8-browser" "1.0.0-beta.2"
+    tslib "^1.11.1"
+
+"@aws-crypto/raw-keyring@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/raw-keyring/-/raw-keyring-1.7.0.tgz#ad959f700ba7fcab4a5a73dcebd64c0945746485"
+  integrity sha512-syNwgJPeUfVj8LerSjJLp6biS2to/g5AT9bjxUVkhYiYQJvN8P5JjEKOEh08fswAUghv3H+noXdTtEWCOg/OOw==
+  dependencies:
+    "@aws-crypto/material-management" "^1.7.0"
+    "@aws-crypto/serialize" "^1.7.0"
+    tslib "^1.11.1"
+
+"@aws-crypto/raw-rsa-keyring-browser@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/raw-rsa-keyring-browser/-/raw-rsa-keyring-browser-1.7.0.tgz#8f5a57ccd0fb68d1a33f7459bfe8ab8ecd44f4f1"
+  integrity sha512-iWSN2VWfrkTzsaapHykgjSRX1FniZjLGI6lBC0OmVXoekanC5U3gqC42WoWNhVNVJGb5Zd2OmVBEduIi1BiM9Q==
+  dependencies:
+    "@aws-crypto/material-management-browser" "^1.7.0"
+    "@aws-crypto/random-source-browser" "^1.0.0-alpha.0"
+    "@aws-crypto/raw-keyring" "^1.7.0"
+    "@aws-crypto/web-crypto-backend" "^1.1.2"
+    "@aws-sdk/util-base64-browser" "1.0.0-beta.2"
+    tslib "^1.11.1"
+
+"@aws-crypto/serialize@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/serialize/-/serialize-1.7.0.tgz#c3fa2637a0ff6bdcbe6c1ef1e678f49be9611f7d"
+  integrity sha512-oHFxK0BKvR8cgctkmoEJW7vF44ayrnz3tKXl573PRhGRhxx8NKe/vdEqVfIaNxSlYksGL4eqFNEeLf6K2L/bPw==
+  dependencies:
+    "@aws-crypto/material-management" "^1.7.0"
+    asn1.js "^5.3.0"
+    bn.js "^5.1.1"
+    tslib "^1.11.1"
+
+"@aws-crypto/supports-web-crypto@1.0.0", "@aws-crypto/supports-web-crypto@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/supports-web-crypto/-/supports-web-crypto-1.0.0.tgz#c40901bc17ac1e875e248df16a2b47ad8bfd9a93"
+  integrity sha512-IHLfv+WmVH89EW4n6a5eE8/hUlz6qkWGMn/v4r5ZgzcXdTC5nolii2z3k46y01hWRiC2PPhOdeSLzMUCUMco7g==
+  dependencies:
+    tslib "^1.11.1"
+
+"@aws-crypto/web-crypto-backend@^1.1.2":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@aws-crypto/web-crypto-backend/-/web-crypto-backend-1.2.0.tgz#fae583047c46d895518cdfd2ca4b3e7899f72fe7"
+  integrity sha512-lI1dQLlD4oLRX1GVvS62LEDQ+Wxb/jOuRqMpnh1FDY0nMz/WT6vltXupX0/iVDn5MK+AHDznA12uoNsX52/sAg==
+  dependencies:
+    "@aws-crypto/ie11-detection" "1.0.0"
+    "@aws-crypto/supports-web-crypto" "1.0.0"
+    "@aws-sdk/util-locate-window" "3.1.0"
+    tslib "^1.11.1"
+
+"@aws-sdk/util-base64-browser@1.0.0-beta.2":
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/util-base64-browser/-/util-base64-browser-1.0.0-beta.2.tgz#021c862d1f6d27e903b433c7fe0497f4386acc66"
+  integrity sha512-KMhVPHEjGIiamDlAJkXpmejGy6Em5ufBOQxX+CIjdOKVOQil8ybiHxnYrzfDUwQqztvIgJrpdSKyiV9PJmdK3A==
+  dependencies:
+    tslib "^1.8.0"
+
+"@aws-sdk/util-locate-window@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/util-locate-window/-/util-locate-window-3.1.0.tgz#a04058b8d1044521dda9ca77b81be0ffc26bf0d7"
+  integrity sha512-HAU9Sx3EJMGU4Cfq2m3t2QnkINNQx5KWa6xGctCLN2C8bNWOpKqQhWO6qcxsXalrdW5qiXY5sj8JZGRaLa3yyQ==
+  dependencies:
+    tslib "^1.8.0"
+
+"@aws-sdk/util-locate-window@^3.0.0":
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/util-locate-window/-/util-locate-window-3.10.0.tgz#87287d43d9401bf1ad4a60f61e85f97104ece018"
+  integrity sha512-dGEOv5KVlfV2kRVQf+jKB2UEaIUXCoays5C9TAwB/7GM+E2ZJIqRUlhh5japyVJIUJmY6s9zqgua/LFUWD5nAA==
+  dependencies:
+    tslib "^1.8.0"
+
+"@aws-sdk/util-utf8-browser@1.0.0-beta.2":
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/util-utf8-browser/-/util-utf8-browser-1.0.0-beta.2.tgz#20456a061aef77509a2fcfdfb48ddabab39a2909"
+  integrity sha512-71qy8bV0L/wFUDdIyOp7T6iMvHV7T2fldlAlfYinun3uigWcQcTgoo6cqsCuoPlDaDsWGLDpnyCzWASEr2aI0A==
+  dependencies:
+    tslib "^1.8.0"
+
 "@babel/code-frame@7.8.3":
   version "7.8.3"
   resolved "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
@@ -1031,10 +1236,39 @@
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.4.tgz#38fd73ddfd9b55abb1e1b2ed578cb55bd7b7d339"
   integrity sha512-8+KAKzEvSUdeo+kmqnKrqgeE+LcA0tjYWFY7RPProVYwnqDjukzO+3b6dLD56rYX5TdWejnEOLJYOIeh4CXKuA==
 
+"@types/lru-cache@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@types/lru-cache/-/lru-cache-5.1.0.tgz#57f228f2b80c046b4a1bd5cac031f81f207f4f03"
+  integrity sha512-RaE0B+14ToE4l6UqdarKPnXwVDuigfFv+5j9Dze/Nqr23yyuqdNvzcZi3xB+3Agvi5R4EOgAksfv3lXX4vBt9w==
+
+"@types/node@^14.0.11":
+  version "14.14.37"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.37.tgz#a3dd8da4eb84a996c36e331df98d82abd76b516e"
+  integrity sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==
+
+"@types/prop-types@*":
+  version "15.7.3"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
+  integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
+
 "@types/q@^1.5.1":
   version "1.5.4"
   resolved "https://registry.npmjs.org/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
+
+"@types/react@^16.9.35":
+  version "16.14.5"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.14.5.tgz#2c39b5cadefaf4829818f9219e5e093325979f4d"
+  integrity sha512-YRRv9DNZhaVTVRh9Wmmit7Y0UFhEVqXqCSw3uazRWMxa2x85hWQZ5BN24i7GXZbaclaLXEcodEeIHsjBA8eAMw==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/scheduler@*":
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.1.tgz#18845205e86ff0038517aab7a18a62a6b9f71275"
+  integrity sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -1207,6 +1441,11 @@ adjust-sourcemap-loader@2.0.0:
     object-path "0.11.4"
     regex-parser "2.2.10"
 
+aes-js@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-3.0.0.tgz#e21df10ad6c2053295bcbb8dab40b09dbea87e4d"
+  integrity sha1-4h3xCtbCBTKVvLuNq0Cwnb6ofk0=
+
 aggregate-error@^3.0.0:
   version "3.0.1"
   resolved "https://registry.npmjs.org/aggregate-error/-/aggregate-error-3.0.1.tgz#db2fe7246e536f40d9b5442a39e117d7dd6a24e0"
@@ -1345,6 +1584,16 @@ asn1.js@^4.0.0:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
 
+asn1.js@^5.3.0:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/asn1.js/-/asn1.js-5.4.1.tgz#11a980b84ebb91781ce35b0fdc2ee294e3783f07"
+  integrity sha512-+I//4cYPccV8LdmBLiX8CYvf9Sp3vQsrqu2QNXRcrbiWvcx/UdlFiqUJJzxRQxgsZmvhXhn4cSKeSmoFjVdupA==
+  dependencies:
+    bn.js "^4.0.0"
+    inherits "^2.0.1"
+    minimalistic-assert "^1.0.0"
+    safer-buffer "^2.1.0"
+
 assert@1.4.1:
   version "1.4.1"
   resolved "https://registry.npmjs.org/assert/-/assert-1.4.1.tgz#99912d591836b5a6f5b345c0f07eefc08fc65d91"
@@ -1374,6 +1623,21 @@ atob@^2.1.2:
   version "2.1.2"
   resolved "https://registry.npmjs.org/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
+
+aws-sdk@^2.650.0:
+  version "2.876.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.876.0.tgz#afb7d0641795c4fdf09c6ee635a415534cd57a75"
+  integrity sha512-M+8M2U0X12pVCYyOJjabxCzFJaql2F0Wpfjwyq5aSso0y6OiqV1nPUgpviODQ8w4ZQy61xpMUO/54jLICy7kRQ==
+  dependencies:
+    buffer "4.9.2"
+    events "1.1.1"
+    ieee754 "1.1.13"
+    jmespath "0.15.0"
+    querystring "0.2.0"
+    sax "1.2.1"
+    url "0.10.3"
+    uuid "3.3.2"
+    xml2js "0.4.19"
 
 babel-code-frame@^6.22.0:
   version "6.26.0"
@@ -1591,9 +1855,9 @@ buffer-xor@^1.0.3:
   resolved "https://registry.npmjs.org/buffer-xor/-/buffer-xor-1.0.3.tgz#26e61ed1422fb70dd42e6e36729ed51d855fe8d9"
   integrity sha1-JuYe0UIvtw3ULm42cp7VHYVf6Nk=
 
-buffer@^4.3.0:
+buffer@4.9.2, buffer@^4.3.0:
   version "4.9.2"
-  resolved "https://registry.npmjs.org/buffer/-/buffer-4.9.2.tgz#230ead344002988644841ab0244af8c44bbe3ef8"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-4.9.2.tgz#230ead344002988644841ab0244af8c44bbe3ef8"
   integrity sha512-xq+q3SRMOxGivLhBNaUdC64hDTQwejJ+H0T/NB1XMtTVEwNTrfFF3gAxiyW0Bu/xWEGhjVKgUcMhCrUy2+uCWg==
   dependencies:
     base64-js "^1.0.2"
@@ -2195,6 +2459,11 @@ csso@^4.0.2:
   dependencies:
     css-tree "1.0.0-alpha.39"
 
+csstype@^3.0.2:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.7.tgz#2a5fb75e1015e84dd15692f71e89a1450290950b"
+  integrity sha512-KxnUB0ZMlnUWCsx2Z8MUsr6qV6ja1w9ArPErJaJaF8a5SOWoHLIszeCTKGRGRgtLgYrs1E8CHkNSP1VZTTPc9g==
+
 cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
@@ -2349,6 +2618,19 @@ electron-to-chromium@^1.3.413:
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.464.tgz#fe13feaa08f6f865d3c89d5d72e54c194f463aa5"
   integrity sha512-Oo+0+CN9d2z6FToQW6Hwvi9ez09Y/usKwr0tsDsyg43a871zVJCi1nR0v03djLbRNcaCKjtrnVf2XJhTxEpPCg==
 
+elliptic@6.5.3:
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.3.tgz#cb59eb2efdaf73a0bd78ccd7015a62ad6e0f93d6"
+  integrity sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==
+  dependencies:
+    bn.js "^4.4.0"
+    brorand "^1.0.1"
+    hash.js "^1.0.0"
+    hmac-drbg "^1.0.0"
+    inherits "^2.0.1"
+    minimalistic-assert "^1.0.0"
+    minimalistic-crypto-utils "^1.0.0"
+
 elliptic@^6.0.0, elliptic@^6.5.2:
   version "6.5.2"
   resolved "https://registry.npmjs.org/elliptic/-/elliptic-6.5.2.tgz#05c5678d7173c049d8ca433552224a495d0e3762"
@@ -2493,6 +2775,26 @@ esutils@^2.0.2:
   version "2.0.3"
   resolved "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
+
+ethers@^4.0.47:
+  version "4.0.48"
+  resolved "https://registry.yarnpkg.com/ethers/-/ethers-4.0.48.tgz#330c65b8133e112b0613156e57e92d9009d8fbbe"
+  integrity sha512-sZD5K8H28dOrcidzx9f8KYh8083n5BexIO3+SbE4jK83L85FxtpXZBCQdXb8gkg+7sBqomcLhhkU7UHL+F7I2g==
+  dependencies:
+    aes-js "3.0.0"
+    bn.js "^4.4.0"
+    elliptic "6.5.3"
+    hash.js "1.1.3"
+    js-sha3 "0.5.7"
+    scrypt-js "2.0.4"
+    setimmediate "1.0.4"
+    uuid "2.0.1"
+    xmlhttprequest "1.8.0"
+
+events@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/events/-/events-1.1.1.tgz#9ebdb7635ad099c70dcc4c2a1f5004288e8bd924"
+  integrity sha1-nr23Y1rQmccNzEwqH1AEKI6L2SQ=
 
 events@^3.0.0:
   version "3.1.0"
@@ -2831,6 +3133,14 @@ hash-base@^3.0.0:
     readable-stream "^3.6.0"
     safe-buffer "^5.2.0"
 
+hash.js@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/hash.js/-/hash.js-1.1.3.tgz#340dedbe6290187151c1ea1d777a3448935df846"
+  integrity sha512-/UETyP0W22QILqS+6HowevwhEFJ3MBJnwTf75Qob9Wz9t0DPuisL8kW8YZMK62dHAKE1c1p+gY1TtOLY+USEHA==
+  dependencies:
+    inherits "^2.0.3"
+    minimalistic-assert "^1.0.0"
+
 hash.js@^1.0.0, hash.js@^1.0.3:
   version "1.1.7"
   resolved "https://registry.npmjs.org/hash.js/-/hash.js-1.1.7.tgz#0babca538e8d4ee4a0f8988d68866537a003cf42"
@@ -2890,9 +3200,9 @@ icss-utils@^4.0.0, icss-utils@^4.1.1:
   dependencies:
     postcss "^7.0.14"
 
-ieee754@^1.1.4:
+ieee754@1.1.13, ieee754@^1.1.4:
   version "1.1.13"
-  resolved "https://registry.npmjs.org/ieee754/-/ieee754-1.1.13.tgz#ec168558e95aa181fd87d37f55c32bbcb6708b84"
+  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.13.tgz#ec168558e95aa181fd87d37f55c32bbcb6708b84"
   integrity sha512-4vf7I2LYV/HaWerSo3XmlMkp5eZ83i+/CDluXi/IGTs/O1sejBNhTtnxzmRZfvOUqj7lZjqHkeTvpgSFDlWZTg==
 
 iferr@^0.1.5:
@@ -3185,6 +3495,16 @@ jest-worker@24.9.0:
   dependencies:
     merge-stream "^2.0.0"
     supports-color "^6.1.0"
+
+jmespath@0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
+  integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
+
+js-sha3@0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/js-sha3/-/js-sha3-0.5.7.tgz#0d4ffd8002d5333aabaf4a23eed2f6374c9f28e7"
+  integrity sha1-DU/9gALVMzqrr0oj7tL2N0yfKOc=
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -4748,6 +5068,11 @@ safe-regex@^1.1.0:
   dependencies:
     ret "~0.1.10"
 
+safer-buffer@^2.1.0:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
+  integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
+
 sass-loader@8.0.2:
   version "8.0.2"
   resolved "https://registry.npmjs.org/sass-loader/-/sass-loader-8.0.2.tgz#debecd8c3ce243c76454f2e8290482150380090d"
@@ -4759,9 +5084,14 @@ sass-loader@8.0.2:
     schema-utils "^2.6.1"
     semver "^6.3.0"
 
-sax@~1.2.4:
+sax@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.1.tgz#7b8e656190b228e81a66aea748480d828cd2d37a"
+  integrity sha1-e45lYZCyKOgaZq6nSEgNgozS03o=
+
+sax@>=0.6.0, sax@~1.2.4:
   version "1.2.4"
-  resolved "https://registry.npmjs.org/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+  resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
 scheduler@^0.19.1:
@@ -4798,6 +5128,11 @@ schema-utils@^2.6.1, schema-utils@^2.6.6:
     ajv "^6.12.2"
     ajv-keywords "^3.4.1"
 
+scrypt-js@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/scrypt-js/-/scrypt-js-2.0.4.tgz#32f8c5149f0797672e551c07e230f834b6af5f16"
+  integrity sha512-4KsaGcPnuhtCZQCxFxN3GVYIhKFPTdLd8PLC552XwbMndtD0cjRFAhDuuydXQ0h08ZfPgzqe6EKHozpuH74iDw==
+
 semver@7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/semver/-/semver-7.0.0.tgz#5f3ca35761e47e05b206c6daff2cf814f0316b8e"
@@ -4829,6 +5164,11 @@ set-value@^2.0.0, set-value@^2.0.1:
     is-extendable "^0.1.1"
     is-plain-object "^2.0.3"
     split-string "^3.0.1"
+
+setimmediate@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/setimmediate/-/setimmediate-1.0.4.tgz#20e81de622d4a02588ce0c8da8973cbcf1d3138f"
+  integrity sha1-IOgd5iLUoCWIzgyNqJc8vPHTE48=
 
 setimmediate@^1.0.4:
   version "1.0.5"
@@ -5304,6 +5644,11 @@ ts-pnp@^1.1.6:
   resolved "https://registry.npmjs.org/ts-pnp/-/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha512-csd+vJOb/gkzvcCHgTGSChYpy5f1/XKNsmvBGO4JXS+z1v2HobugDz4s1IeFXM3wZB44uczs+eazB5Q/ccdhQw==
 
+tslib@^1.11.1, tslib@^1.8.0:
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
+  integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
+
 tslib@^1.9.0:
   version "1.13.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
@@ -5333,6 +5678,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript@^3.9.5:
+  version "3.9.9"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.9.tgz#e69905c54bc0681d0518bd4d587cc6f2d0b1a674"
+  integrity sha512-kdMjTiekY+z/ubJCATUPlRDl39vXYiMV9iyeMuEuXZh2we6zz80uovNN2WlAxmmdE/Z/YQe+EbOEXB5RHEED3w==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
@@ -5421,6 +5771,14 @@ urix@^0.1.0:
   resolved "https://registry.npmjs.org/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
+url@0.10.3:
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/url/-/url-0.10.3.tgz#021e4d9c7705f21bbf37d03ceb58767402774c64"
+  integrity sha1-Ah5NnHcF8hu/N9A861h2dAJ3TGQ=
+  dependencies:
+    punycode "1.3.2"
+    querystring "0.2.0"
+
 url@^0.11.0:
   version "0.11.0"
   resolved "https://registry.npmjs.org/url/-/url-0.11.0.tgz#3838e97cfc60521eb73c525a8e55bfdd9e2e28f1"
@@ -5469,6 +5827,16 @@ util@^0.11.0:
   integrity sha512-HShAsny+zS2TZfaXxD9tYj4HQGlBezXZMZuM/S5PKLLoZkShZiGk9o5CzukI1LVHZvjdvZ2Sj1aW/Ndn2NB/HQ==
   dependencies:
     inherits "2.0.3"
+
+uuid@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.1.tgz#c2a30dedb3e535d72ccf82e343941a50ba8533ac"
+  integrity sha1-wqMN7bPlNdcsz4LjQ5QaULqFM6w=
+
+uuid@3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
+  integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
 
 vendors@^1.0.0:
   version "1.0.4"
@@ -5586,15 +5954,33 @@ wrappy@1:
   resolved "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
+xml2js@0.4.19:
+  version "0.4.19"
+  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.4.19.tgz#686c20f213209e94abf0d1bcf1efaa291c7827a7"
+  integrity sha512-esZnJZJOiJR9wWKMyuvSE1y6Dq5LCuJanqhxslH2bxM6duahNZ+HMpCLhBQGZkbX6xRf8x1Y2eJlgt2q3qo49Q==
+  dependencies:
+    sax ">=0.6.0"
+    xmlbuilder "~9.0.1"
+
+xmlbuilder@~9.0.1:
+  version "9.0.7"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-9.0.7.tgz#132ee63d2ec5565c557e20f4c22df9aca686b10d"
+  integrity sha1-Ey7mPS7FVlxVfiD0wi35rKaGsQ0=
+
+xmlhttprequest@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/xmlhttprequest/-/xmlhttprequest-1.8.0.tgz#67fe075c5c24fef39f9d65f5f7b7fe75171968fc"
+  integrity sha1-Z/4HXFwk/vOfnWX197f+dRcZaPw=
+
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"
   resolved "https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/y18n/-/y18n-4.0.0.tgz#95ef94f85ecc81d007c264e190a120f0a3c8566b"
-  integrity sha512-r9S/ZyXu/Xu9q1tYlpsLIsa3EeLXXk0VwlxqTcFRfg9EhMW+17kbt9G0NrgCmhGb5vT2hyhJZLfDGx+7+5Uj/w==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-4.0.1.tgz#8db2b83c31c5d75099bb890b23f3094891e247d4"
+  integrity sha512-wNcy4NvjMYL8gogWWYAO7ZFWFfHcbdbE57tZO8e4cbpj8tfUcwrwqSl3ad8HxpYWCdXcJUCeKKZS62Av1affwQ==
 
 yallist@^3.0.2:
   version "3.1.1"
